@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Eugene Ware <eugene@noblesamurai.com>
+MAINTAINER Lukas Jakob Hafner <luki@booncon.com>
 
 # Keep upstart from complaining
 RUN dpkg-divert --local --rename --add /sbin/initctl
