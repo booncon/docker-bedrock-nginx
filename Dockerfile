@@ -8,6 +8,8 @@ RUN ln -sf /bin/true /sbin/initctl
 # Let the conatiner know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
 
+ENV DOCKER_HOST_IP $(route -n | awk '/UG[ \t]/{print $2}')
+
 RUN apt-get update
 RUN apt-get -y upgrade
 
