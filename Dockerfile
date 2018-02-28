@@ -5,7 +5,7 @@ MAINTAINER Lukas Jakob Hafner <luki@booncon.com>
 RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -sf /bin/true /sbin/initctl
 
-# Let the conatiner know that there is no tty
+# Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
 
 ENV DOCKER_HOST_IP $(route -n | awk '/UG[ \t]/{print $2}')
